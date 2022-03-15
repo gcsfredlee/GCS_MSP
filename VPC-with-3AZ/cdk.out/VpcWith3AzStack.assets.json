@@ -1,0 +1,20 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "2747684242479f90e70a20192846e43662aa507b0fc79621fdd6dfd1f80528be": {
+      "source": {
+        "path": "VpcWith3AzStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "530484178838-ap-southeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-530484178838-ap-southeast-1",
+          "objectKey": "2747684242479f90e70a20192846e43662aa507b0fc79621fdd6dfd1f80528be.json",
+          "region": "ap-southeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::530484178838:role/cdk-hnb659fds-file-publishing-role-530484178838-ap-southeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
