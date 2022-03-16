@@ -1,0 +1,184 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Ec2TemplateStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Ec2TemplateStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Ec2TemplateStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Ec2TemplateStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70d7455384c3257ad6f9c3d48b47dac185246c62c4e9dc5859a45adf7a9e7b26.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Ec2TemplateStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Ec2TemplateStack.assets"
+      ],
+      "metadata": {
+        "/Ec2TemplateStack/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet1SubnetEE53BCBC"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet1RouteTable23B73BA2"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet1RouteTableAssociationFD2182F2"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet1DefaultRoute377544B7"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet2Subnet7959E1B2"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet2RouteTable01067F80"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet2RouteTableAssociation781F3620"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/asteriskSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCasteriskSubnet2DefaultRoute9650F4DB"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3"
+          }
+        ],
+        "/Ec2TemplateStack/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC"
+          }
+        ],
+        "/Ec2TemplateStack/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SecurityGroupDD263621"
+          }
+        ],
+        "/Ec2TemplateStack/ec2Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2Role38AB65C0"
+          }
+        ],
+        "/Ec2TemplateStack/Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceProfileAB5AEF02"
+          }
+        ],
+        "/Ec2TemplateStack/Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceC1063A87"
+          }
+        ],
+        "/Ec2TemplateStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/Ec2TemplateStack/IP Address": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IPAddress"
+          }
+        ],
+        "/Ec2TemplateStack/Download Key Command": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DownloadKeyCommand"
+          }
+        ],
+        "/Ec2TemplateStack/ssh command": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sshcommand"
+          }
+        ],
+        "/Ec2TemplateStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Ec2TemplateStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Ec2TemplateStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Ec2TemplateStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Ec2TemplateStack"
+    }
+  }
+}
