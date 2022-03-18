@@ -63,7 +63,7 @@ export class Ec2TemplateStack extends Stack {
     // Create the instance using the Security Group, AMI, and KeyPair defined in the VPC created
     const ec2Instance = new aws_ec2.Instance(this, 'Instance', {
       vpc,
-      instanceType: aws_ec2.InstanceType.of(aws_ec2.InstanceClass.T2, aws_ec2.InstanceSize.SMALL),
+      instanceType: aws_ec2.InstanceType.of(aws_ec2.InstanceClass.T2, aws_ec2.InstanceSize.micro),
       machineImage: ami,
       securityGroup: securityGroup,
       // keyName: key.keyPairName,
