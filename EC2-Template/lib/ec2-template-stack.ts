@@ -76,7 +76,7 @@ export class Ec2TemplateStack extends Stack {
     //   bucket: asset.bucket,
     //   bucketKey: asset.s3ObjectKey,
     // });
-
+    // TEST123
     // ec2Instance.userData.addExecuteFileCommand({
     //   filePath: localPath,
     //   arguments: '--verbose -y'
